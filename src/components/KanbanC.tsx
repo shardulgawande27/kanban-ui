@@ -10,6 +10,7 @@ interface TaskType {
   title: string;
   status: string;
   priority: string;
+  date: string;
 }
 interface KanbanProps {
   tasksProp: TaskType[];
@@ -71,7 +72,7 @@ const Kanban: React.FC<KanbanProps> = ({ tasksProp }) => {
         >
           <div className="flex justify-between ">
             <p className="font-normal">Due</p>
-            <p className="font-semibold">27 Dec 2024</p>
+            <p className="font-semibold">{task.date}</p>
           </div>
           <div className="mt-4 flex justify-start">
             <span
